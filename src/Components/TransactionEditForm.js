@@ -9,7 +9,8 @@ function TransactionEditForm() {
     date: "",
     name: "",
     amount: "",
-    from: ""
+    from: "",
+    category: "",
   });
   const navigate = useNavigate();
 
@@ -30,14 +31,14 @@ function TransactionEditForm() {
     event.preventDefault();
     axios.put(`${process.env.REACT_APP_API_URL}/transactions/${index}`, transaction)
     .then((res)=>{
-      navigate(`/transactions/${index}`);
+      navigate(`/transactions`);
     }).catch((err)=>{
       console.log(err);
     })
   };
   return (
     <div className="Edit">
-      <form onSubmit={handleSubmit}>
+      <form id="edit" onSubmit={handleSubmit}>
         <label htmlFor="date">Date</label>
         <input 
           id="date"
@@ -71,13 +72,21 @@ function TransactionEditForm() {
           onChange={handleTextChange}
           placeholder="from"
         />
+        <label htmlFor="category">Category</label>
+        <input 
+          id="category"
+          type="text"
+          value={transaction.category}
+          onChange={handleTextChange}
+          placeholder="category"
+        />
         <br />
 
         <input type="submit" />
       </form>
-      <Link to={`/transactions`}>
+      {/* <Link to={`/transactions/${index}`}>
         <button>Back</button>
-      </Link>
+      </Link> */}
     </div>
   )
 

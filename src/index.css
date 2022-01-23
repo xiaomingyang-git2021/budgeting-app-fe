@@ -8,6 +8,10 @@ nav {
   margin-bottom: 1em;
 }
 
+#New {
+  text-align: left;
+}
+
 main {
   width: 90%;
   margin: auto;
@@ -43,14 +47,62 @@ tbody tr:nth-child(even) {
 }
 
 .New {
-  /* border: 1px solid gold;
-  margin: auto;
-  width: 95%; */
+  /* border: 1px solid black; */
+  margin-left: 0;
+  width: 95%;
+}
+
+#date {
+  margin-left: 0;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#name {
+  margin-left: 0;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#amount {
+  margin-left: 0;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#from {
+  margin-left: 0;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#category {
+  margin-left: 0;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#form {
+  text-align: left;
+}
+
+#edit {
+  text-align: left;
+}
+
+#tide {
+  text-align: left;
+}
+
+#single {
+  text-align: center;
 }
 
 .New form {
   margin: auto;
-  width: 95%;
+  width: 100%;
 }
 
 input[type],
@@ -60,10 +112,10 @@ textarea {
   margin: auto;
 }
 
-input[type="checkbox"] {
+/* input[type="checkbox"] {
   margin: 0;
   width: 15%;
-}
+} */
 
 input[type="submit"] {
   width: 30%;

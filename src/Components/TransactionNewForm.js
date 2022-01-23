@@ -27,8 +27,8 @@ function TransactionNewForm() {
   };
   return (
     <div className="New">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="date">Date</label>
+      <form id="form" onSubmit={handleSubmit}>
+        <label htmlFor="date" id="Date">Date</label>
         <input 
           id="date"
           value={transaction.date}
@@ -37,7 +37,7 @@ function TransactionNewForm() {
           placeholder="date"
           required
         />
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name" id="Name">Name</label>
         <input 
           id="name"
           type="text"
@@ -45,7 +45,7 @@ function TransactionNewForm() {
           onChange={handleTextChange}
           placeholder="name"
         />
-        <label htmlFor="amount">Amount</label>
+        <label htmlFor="amount" id="Amount">Amount</label>
         <input 
           id="amount"
           type="number"
@@ -53,7 +53,7 @@ function TransactionNewForm() {
           onChange={handleTextChange}
           placeholder="amount"
         />
-        <label htmlFor="from">From</label>
+        <label htmlFor="from" id="From">From</label>
         <input 
           id="from"
           type="text"
@@ -61,7 +61,7 @@ function TransactionNewForm() {
           onChange={handleTextChange}
           placeholder="from"
         />
-        <label htmlFor="category">Category</label>
+        <label htmlFor="category" id="Category">Category</label>
         <input 
           id="category"
           type="text"
