@@ -7,8 +7,9 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 function Transactions() {
   const [transactions, setTransactions] = useState([]);
-  const API_URL=process.env.REACT_APP_API_URL;
+  // const API_URL=process.env.REACT_APP_API_URL;
   useEffect(()=>{
+    // http://www.localhost:3003/transactions
     axios.get(API_URL + "/transactions")
     .then((res)=>{
       setTransactions(res.data);
@@ -39,13 +40,13 @@ function Transactions() {
           </thead>
           <tbody>
             {transactions.map((transaction, index) => {
-              return <Transaction key={index} transaction={transaction} />
+              return <Transaction key={index} transaction={transaction} index={index} />
             })}
           </tbody>
         </Table>
       </section>
     </div>
-  )
-}
+  );
+};
 
 export default Transactions;

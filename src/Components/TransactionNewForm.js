@@ -8,6 +8,7 @@ function TransactionNewForm() {
     name: "",
     amount: "",
     from: "",
+    category: "",
   });
   const navigate = useNavigate();
 
@@ -59,6 +60,14 @@ function TransactionNewForm() {
           value={transaction.from}
           onChange={handleTextChange}
           placeholder="from"
+        />
+        <label htmlFor="category">Category</label>
+        <input 
+          id="category"
+          type="text"
+          value={transaction.category}
+          onChange={handleTextChange}
+          placeholder="category"
         />
         <br />
         <button type="submit">CREATE NEW ITEM</button>
