@@ -5,7 +5,7 @@ import { Table } from "react-bootstrap";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-function Transactions() {
+function Transactions({getTotalAmount}) {
   const [transactions, setTransactions] = useState([]);
   // const API_URL=process.env.REACT_APP_API_URL;
   useEffect(()=>{
@@ -13,6 +13,9 @@ function Transactions() {
     axios.get(API_URL + "/transactions")
     .then((res)=>{
       setTransactions(res.data);
+      getTotalAmount(res.data.map((el)=>{
+        return Number(el.amount)
+      }).reduce((a, b)=> a + b, 0))
     }).catch((err)=>{
       throw err;
     })
