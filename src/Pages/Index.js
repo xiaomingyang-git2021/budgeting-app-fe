@@ -8,7 +8,7 @@ function Index() {
   }
   return (
     <div className="Index">
-      <h2>Bank Account Total:  {totalAmount}</h2>
+      <h2 style={totalAmount > 1000? {color: "green"}: totalAmount > 0? {color:"grey"}: {color: "red"}}>Bank Account Total:  {totalAmount}</h2>
       <Transactions getTotalAmount={getTotalAmount} />
     </div>
   );
