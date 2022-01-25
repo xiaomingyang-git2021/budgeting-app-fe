@@ -40,6 +40,7 @@ function TransactionDetails() {
       <br  />
       <h4>
         <span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           {transaction.date}
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           {transaction.name}
