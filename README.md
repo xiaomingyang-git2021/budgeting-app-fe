@@ -8,4 +8,4 @@ https://github.com/xiaomingyang-git2021/budgeting-app-fe/blob/main/README.md
 https://xm-be-budget-app.herokuapp.com/
 
 ## Deployed Frontend Link
-https://goofy-hawking-93b1df.netlify.app/
+https://xiaoming-budgeting-2022.netlify.app/
