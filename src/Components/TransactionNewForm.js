@@ -32,7 +32,7 @@ function TransactionNewForm() {
         <input 
           id="date"
           value={transaction.date}
-          type="text"
+          type="date"
           onChange={handleTextChange}
           placeholder="date"
           required
